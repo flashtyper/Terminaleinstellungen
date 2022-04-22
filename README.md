@@ -1,0 +1,2 @@
+# .bashrc
+Fedora
