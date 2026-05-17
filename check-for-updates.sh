@@ -5,11 +5,11 @@ REMOTE=$(git -C ~/Coding/Terminaleinstellungen rev-parse "$UPSTREAM")
 BASE=$(git -C ~/Coding/Terminaleinstellungen merge-base @ "$UPSTREAM")
 
 if [ $LOCAL = $REMOTE ]; then
-    echo "Up-to-date"
+    echo "Terminaleinstellungen Repo is Up-to-date"
 elif [ $LOCAL = $BASE ]; then
-    echo "Need to pull"
+    echo "Terminaleinstellungen Repo needs a pull"
 elif [ $REMOTE = $BASE ]; then
-    echo "Need to push"
+    echo "Terminaleinstellungen Repo needs a push"
 else
-    echo "Diverged"
+    echo "Terminaleinstellungen Repo is fucked up (diverged)"
 fi
