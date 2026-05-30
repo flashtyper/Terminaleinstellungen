@@ -2,6 +2,8 @@
 set nocompatible
 filetype off                  " required
 
+let g:polyglot_disabled = ['python', 'python-indent', 'python-compiler']
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -17,7 +19,6 @@ Plugin 'ycm-core/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'preservim/tagbar'
 Plugin 'tpope/vim-commentary'
-Plugin 'neoclide/coc.nvim'
 Plugin 'mg979/vim-visual-multi'
 
 " All of your Plugins must be added before the following line
