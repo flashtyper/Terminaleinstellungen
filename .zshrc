@@ -4,9 +4,12 @@ alias ls='ls -lh'
 alias appdata="open ${HOME}/library/application\ support/minecraft"
 alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
+~/Coding/Terminaleinstellungen/check-for-updates.sh
 
 PROMPT="%F{green}%B%n@%m%f:%F{blue}%~%f%b > "
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+autoload -Uz select-word-style
+select-word-style bash
 
 if type brew &>/dev/null
 then
@@ -37,7 +40,7 @@ convMP4toMP3() {
 	ffmpeg -i $1 -b:a 192K -vn $2
 }
 finde() {
-  find . -type f -iname "*${1}*"
+  mdfind -onlyin . -name "${1}"
 }
 grepr() {
   grep -rni "${1}"
