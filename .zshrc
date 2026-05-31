@@ -3,6 +3,8 @@ export HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 alias ls='ls -lh'
 alias appdata="open ${HOME}/library/application\ support/minecraft"
 alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+alias venv="source .venv/bin/activate"
+alias createvenv="python3 -m venv .venv"
 
 ~/Coding/Terminaleinstellungen/check-for-updates.sh
 
@@ -43,7 +45,12 @@ finde() {
   mdfind -onlyin . -name "${1}"
 }
 grepr() {
-  grep -rni "${1}"
+  if [ $# -eq 2 ]
+  then
+    grep -rni "${1}" "${2}"
+  else
+    grep -rni "${1}"
+  fi
 }
 
 startScroll() {
