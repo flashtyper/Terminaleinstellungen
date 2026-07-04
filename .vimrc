@@ -19,7 +19,8 @@ Plugin 'ycm-core/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'preservim/tagbar'
 Plugin 'tpope/vim-commentary'
-Plugin 'mg979/vim-visual-multi'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'pearofducks/ansible-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
